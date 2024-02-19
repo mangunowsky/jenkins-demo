@@ -33,7 +33,7 @@ pipeline {
             when {
                 beforeAgent true;
                 expression {
-                    return params.pull_model != 'true'
+                    return !params.pull_model
                 }
             }
             steps {
